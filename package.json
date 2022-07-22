@@ -20,5 +20,13 @@
   "author": "",
   "keywords": [],
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaioMt/tarefafinalbd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KaioMt/tarefafinalbd/issues"
+  },
+  "homepage": "https://github.com/KaioMt/tarefafinalbd#readme",
   "description": ""
 }
