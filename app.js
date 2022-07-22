@@ -126,7 +126,7 @@ app.listen(3333);
 console.log('Now the server is running in url: http://127.0.0.1:3333');
 	
 app.use('/',router);
-app.use('/loginuser',router)
+app.use('/loginuser',router);
 app.use('/sobre',router);
 app.use('/usuario',router);
 app.use('/Status',router);
