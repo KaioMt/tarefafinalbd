@@ -1,0 +1,11 @@
+<h1>Listar pagamento</h1>
+
+{{#each usuario}}
+    Nome animal: {{nome_pet}}<br>
+    Nome: {{nome}}<br>
+    Email: {{email}}<br>
+    Cadastrado: {{#formatDate createdAt}}{{/formatDate}}<br>
+    <a href="/del-pagamento/{{id}}"><button>Apagar</button></a> <br>
+    <a href="/edit-pagamento/{{id}}"><button>Editar</button></a>
+    <hr>
+{{/each}}
