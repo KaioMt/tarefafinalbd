@@ -39,13 +39,13 @@ router.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-router.post('/pagamento', function(req, res){
+router.post('/status', function(req, res){
     
     Pagamento.create({
         nome: req.body.nome,
         valor: req.body.valor
     }).then(function(){
-        res.redirect('/pagamento')
+        res.redirect('/status')
        
     }).catch(function(erro){
         res.send("Erro: Pagamento não foi cadastrado com sucesso!" + erro)
@@ -76,8 +76,16 @@ router.get('/edit-pet/:id', function(req, res){
 // login usuario
 router.post('/loginuser', function(req, res){
     Usuario.findOne  ( {where: {  'email': req.body.email, 'senha': req.body.senha}}).then(function(usuario){
+    
+    if (usuario===null){
+        res.redirect('/');
+    }
+    
+    else{
         res.render('editar', {usuario: usuario});
-    })
+    }
+})
+    
 });	
 
 router.post('/edit-pet/:id', function(req, res){
